@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { ROUTES } from './app.routes'
 
@@ -19,7 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +36,7 @@ import { SharedModule } from './shared/shared.module';
    ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
