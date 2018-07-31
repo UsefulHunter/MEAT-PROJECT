@@ -15,12 +15,15 @@ server.use(middlewares);
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser);
 //
+server.post('/login', function (req, resp) {
+    resp.json({ message: 'ok' });
+});
 // Use default router
 server.use(router);
 var options = {
     cert: fs.readFileSync('./backend/keys/cert.pem'),
     key: fs.readFileSync('./backend/keys/key.pem')
 };
-https.createServer(options, server).listen(3001, function () {
+https.createServer(options, server).listen(3002, function () {
     console.log('JSON Server is running on https://localhost:3001');
 });

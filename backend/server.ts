@@ -17,7 +17,9 @@ server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
 //
-
+server.post('/login', (req, resp)=>{
+  resp.json({message: 'ok'})
+})
 // Use default router
 server.use(router)
 
