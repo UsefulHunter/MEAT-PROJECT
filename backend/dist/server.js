@@ -1,13 +1,11 @@
-"use strict";
-exports.__esModule = true;
-var jsonServer = require("json-server");
+var jsonServer = require('json-server');
 // compileOnSave não funcionando automaticamente no VSCOODE, utilizar o comando
 // tsc no terminal, para forçar a compilação para javascript, para então conseguir rodar
 // o servidor
-var fs = require("fs");
-var https = require("https");
-var authz_1 = require("./authz");
-var auth_1 = require("./auth");
+var fs = require('fs');
+var https = require('https');
+var authz_1 = require('./authz');
+var auth_1 = require('./auth');
 var server = jsonServer.create();
 var router = jsonServer.router('db.json');
 var middlewares = jsonServer.defaults();
