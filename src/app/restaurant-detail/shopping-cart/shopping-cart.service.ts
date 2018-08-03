@@ -1,6 +1,5 @@
 import { CartItem } from "./cart-item.model";
 import { MenuItem } from "../menu-item/menu-item.model";
-import { PreActivation } from '@angular/router/src/router'
 import { NotificationService } from '../../shared/messages/notification.service'
 import { Injectable } from "@angular/core";
 
