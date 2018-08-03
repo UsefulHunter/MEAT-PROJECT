@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router'
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/do'
+
+
 import { MEAT_API } from '../../app.api';
 import { User } from './user.model';
 
@@ -25,7 +27,7 @@ export class LoginService{
                                 {email: email, password: password})
                         .do(user => this.user = user)
     }
-    handleLogin(path: string){
+    handleLogin(path?: string){
         this.router.navigate(['/login', path])
     }
 
